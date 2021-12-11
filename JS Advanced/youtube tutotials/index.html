@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <style>
+        :root {
+            --back-color: chartreuse;
+            --border-color: orange;
+        }
+
+        @media (max-width: 350px) {
+            :root {
+                --border-color: red;
+            }
+        }
+
+        #header1 {
+            color: chartreuse;
+            font-size: 50px;
+            font-family: monospace;
+            border-color: var(--border-color);
+            border-width: 5px;
+            border-style: dotted;
+            border-radius: 10px;
+        }
+
+        .blue-background {
+            background-color: var(--back-color);
+            /* margin-bottom: 10px; */
+        }
+
+        .blue-text {
+            color: var(--back-color);
+            font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-rows: 200px 200px;
+            grid-gap: 20px;
+        }
+
+        #item-2 {
+            align-self: end;
+        }
+
+        .avatar {
+            /* Rounded border */
+            border-radius: 50%;
+            height: 64px;
+            width: 64px;
+        }
+
+        .avatar__image {
+            /* Rounded border */
+            border-radius: 50%;
+
+            /* Take full size */
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+    <title>Test</title>
+</head>
+
+<body>
+    <h1 id="header1">Тест</h1>
+    <h1 id="header2" class="blue-text">Test_2</h1>
+    <div class="container">
+        <div class='blue-background'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, id impedit! Nihil
+            qui
+            minima quos. Est ullam ratione animi atque illo error quas? Voluptate aperiam rem saepe, voluptas eos
+            minima.
+        </div>
+        <div class='' id="item-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, id impedit! Nihil
+            qui
+            minima quos. Est ullam ratione animi atque illo error quas? Voluptate aperiam rem saepe, voluptas eos
+            minima.
+        </div>
+        <div class='blue-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, id impedit! Nihil qui
+            minima quos. Est ullam ratione animi atque illo error quas? Voluptate aperiam rem saepe, voluptas eos
+            minima.
+        </div>
+    </div>
+
+    <div class="avatar">
+        <img class="avatar__image" src="profile-pic.jpg" />
+    </div>
+</body>
+
+</html>
