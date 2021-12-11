@@ -1,0 +1,12 @@
+{% extends 'common/navigation_bar.html' %}
+
+{% block content %}
+    <h1>Here is the sign up page</h1>
+
+    <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-primary">Sign Up</button>
+    </form>
+
+{% endblock %}

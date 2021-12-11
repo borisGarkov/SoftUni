@@ -1,0 +1,17 @@
+{% extends 'common/navigation_bar.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="form">
+        <section>
+            <img src="{% static 'images/signup-image.jpg' %}" alt="Signup image">
+        </section>
+        <form method="POST" action="{% url 'home' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}
