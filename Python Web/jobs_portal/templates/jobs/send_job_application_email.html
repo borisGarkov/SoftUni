@@ -1,0 +1,18 @@
+{% autoescape off %}
+
+    Здравейте {{ job_creator_username }},
+
+    {{ first_name }} {{ last_name }} е кандидатствал за вашата позиция {{ title }},
+
+    Телефонът на кандидата е: {{ phone_number }}
+
+    {% if cv_file %}
+        Прикачено може да видите CV-то на кандидата!
+    {% else %}
+        Кандидатът не е прикачил CV.
+    {% endif %}
+
+    Поздрави,
+    Екипът на Rent A Hand :)
+
+{% endautoescape %}
